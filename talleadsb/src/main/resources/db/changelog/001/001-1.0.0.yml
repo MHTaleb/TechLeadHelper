@@ -1,0 +1,7 @@
+#ticket 001 : https://trello.com/c/6y16Ujx0
+
+databaseChangeLog:
+  - include:
+      file: db/changelog/001/users/001-users.yml  # Reference users table creation
+  - include:
+      file: db/changelog/001/security/001-jwt.yml # Reference JWT-related tables

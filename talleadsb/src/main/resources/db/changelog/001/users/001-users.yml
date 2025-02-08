@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-users-table
+      author: housseyn
+      runOnChange: false
+      failOnError: true
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: users
+      changes:
+        - sqlFile:
+            path: sql/001-users.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/001-users-rollback.sql
+            relativeToChangelogFile: true

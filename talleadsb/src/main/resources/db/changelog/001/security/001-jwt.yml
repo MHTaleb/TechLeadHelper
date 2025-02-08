@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-create-jwt-table
+      author: housseyn
+      runOnChange: false
+      failOnError: true
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - tableExists:
+                tableName: jwt_tokens
+      changes:
+        - sqlFile:
+            path: sql/001-jwt.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/001-jwt-rollback.sql
+            relativeToChangelogFile: true

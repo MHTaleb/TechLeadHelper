@@ -1,0 +1,67 @@
+# ---------------------
+# Global Git Ignore
+# ---------------------
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.swp
+.idea/
+.vscode/
+*.iml
+.env
+
+# ---------------------
+# Spring Boot Backend (talleadsb)
+# ---------------------
+/talleadsb/target/
+/talleadsb/bin/
+/talleadsb/.gradle/
+/talleadsb/.mvn/
+/talleadsb/mvnw
+/talleadsb/mvnw.cmd
+/talleadsb/logs/
+/talleadsb/*.log
+/talleadsb/*.jar
+/talleadsb/*.war
+/talleadsb/.classpath
+/talleadsb/.project
+/talleadsb/.settings/
+/talleadsb/.vscode/
+
+# Ignore generated config files
+/talleadsb/application.properties
+/talleadsb/application.yml
+/talleadsb/application-*.yml
+/talleadsb/application-*.properties
+
+# ---------------------
+# Angular Frontend (talleadng)
+# ---------------------
+/talleadng/node_modules/
+/talleadng/dist/
+/talleadng/tmp/
+/talleadng/.angular/
+/talleadng/.idea/
+/talleadng/.vscode/
+/talleadng/.eslintcache
+/talleadng/package-lock.json
+/talleadng/yarn.lock
+
+# Angular environment files (if not meant for public repo)
+# Uncomment if you don't want to push API keys
+# /talleadng/src/environments/environment.ts
+# /talleadng/src/environments/environment.prod.ts
+
+# ---------------------
+# OS-Specific & Temp Files
+# ---------------------
+*.~lock
+*.swo
+*.swn
+*.swp
+*.swd
+*.bak
+*.tmp
+*~.nib
+*.log
