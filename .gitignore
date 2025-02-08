@@ -38,15 +38,15 @@ Thumbs.db
 # ---------------------
 # Angular Frontend (talleadng)
 # ---------------------
-/talleadng/node_modules/
-/talleadng/dist/
-/talleadng/tmp/
-/talleadng/.angular/
-/talleadng/.idea/
-/talleadng/.vscode/
-/talleadng/.eslintcache
-/talleadng/package-lock.json
-/talleadng/yarn.lock
+/talleadng/TalLeadApp/node_modules/
+/talleadng/TalLeadApp/dist/
+/talleadng/TalLeadApp/tmp/
+/talleadng/TalLeadApp/.angular/
+/talleadng/TalLeadApp/.idea/
+/talleadng/TalLeadApp/.vscode/
+/talleadng/TalLeadApp/.eslintcache
+/talleadng/TalLeadApp/package-lock.json
+/talleadng/TalLeadApp/yarn.lock
 
 # Angular environment files (if not meant for public repo)
 # Uncomment if you don't want to push API keys
