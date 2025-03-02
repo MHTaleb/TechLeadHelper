@@ -21,3 +21,8 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+
+jwt:
+  secret: "your-very-secure-secret-key" # Change this in production
+  expiration: 3600000*4 # 1 hour in milliseconds * 4
+
