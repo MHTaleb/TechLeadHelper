@@ -2,21 +2,17 @@ package dz.tal.lead.LeadHelper.configue.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import dz.tal.lead.LeadHelper.infrastructure.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 
 @Configuration
+@RequiredArgsConstructor
 public class UserConfig {
+    private final UserRepository userRepository;
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails user = User.withUsername("admin")
-                .password("{noop}password") // {noop} means no password encoding (for testing only)
-                .roles("ADMIN")
-                .build();
-
-        return new InMemoryUserDetailsManager(user);
+        return username -> userRepository.findByUsername(username).orElseThrow();
     }
 }
